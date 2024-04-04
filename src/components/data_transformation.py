@@ -29,8 +29,8 @@ class DataTransformation:
         
         '''
         try:
-            numerical_columns = ["Person ID", "Age", "Sleep Duration","Quality of Sleep","Physical Activity Level","Stress Level","Heart Rate","Daily Steps","systolic","diastolic"]
-            categorical_columns = ["Gender","Occupation","BMI Category"]
+            numerical_columns = ["Age", "Sleep_Duration","Quality_of_Sleep","Physical_Activity_Level","Stress_Level","Heart_Rate","Daily_Steps","systolic","diastolic"]
+            categorical_columns = ["Gender","Occupation","BMI_Category"]
             
             num_pipeline= Pipeline(
                 steps=[
@@ -79,7 +79,7 @@ class DataTransformation:
 
             preprocessing_obj=self.get_data_transformer_object()
 
-            target_column_name="Sleep Disorder"
+            target_column_name="Sleep_Disorder"
 
             input_feature_train_df=train_df.drop(columns=[target_column_name],axis=1)
             target_feature_train_df=train_df[target_column_name]

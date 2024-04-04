@@ -1,0 +1,136 @@
+<html>
+<body>
+    <div class="login">
+       <h1>Sleep health and sleep disorder diagnostics</h1>
+   
+       <form action="{{ url_for('predict_datapoint')}}" method="post">
+        <h2>
+            <legend>Sleep Disorder Prediction</legend>
+        </h2>
+        <div class="mb-3">
+            <label class="form-label">Gender</label>
+            <select class="form-control" name="Gender" placeholder="Enter you Gender" required>
+                <option class="placeholder" selected disabled value="">Select your Gender</option>
+                <option value="Male">
+                    Male
+                </option>
+                <option value="Female">
+                    Female
+                </option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Occupation</label>
+            <select class="form-control" name="Occupation" placeholder="Enter you ethnicity" required>
+                <option class="placeholder" selected disabled value="">Select Occupation</option>
+                <option value="Sales Representative">
+                    Sales Representative
+                </option>
+                <option value="Software Engineer">
+                    Software Engineer
+                </option>
+                <option value="Doctor">
+                    Doctor
+                </option>
+                <option value="Scientist">
+                    Scientist
+                </option>
+                <option value="Lawyer">
+                    Lawyer
+                </option>
+                <option value="Accountant">
+                    Accountant
+                </option>
+                <option value="Teacher">
+                    Teacher
+                </option>
+                <option value="Salesperson">
+                    Salesperson
+                </option>
+                <option value="Manager">
+                    Manager
+                </option>
+                <option value="Engineer">
+                    Engineer
+                </option>
+                <option value="Nurse">
+                    Nurse
+                </option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Age</label>
+            <input class="form-control" type="number" name="Age"
+                placeholder="Enter your Age" min='18' max='100' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Sleep Duration</label>
+            <input class="form-control" type="number" name="Sleep_Duration"
+                placeholder="Enter your Sleep Quality" min='0' max='10' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Quality of Sleep</label>
+            <input class="form-control" type="number" name="Quality_of_Sleep"
+                placeholder="Enter your Reading score" min='0' max='100' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Physical Activity level (0 - 100)</label>
+            <input class="form-control" type="number" name="Physical_Activity_Level"
+                placeholder="Enter your Reading score" min='0' max='100' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Stress Level (0 - 10)</label>
+            <input class="form-control" type="number" name="Stress_Level"
+                placeholder="Enter your Stress Level" min='0' max='10' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Heart Rate</label>
+            <input class="form-control" type="number" name="Heart_Rate"
+                placeholder="Enter your Heart Rate" min='40' max='200' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Daily Steps</label>
+            <input class="form-control" type="number" name="Daily_Steps"
+                placeholder="Enter your Daily Steps" min='0' max='15000' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Systolic blood pressure</label>
+            <input class="form-control" type="number" name="systolic"
+                placeholder="Enter your Systolic blood pressure" min='0' max='200' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Diastolic blood pressure</label>
+            <input class="form-control" type="number" name="diastolic"
+                placeholder="Enter your Diastolic Blood Pressure" min='0' max='200' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">BMI category</label>
+            <select class="form-control" name="BMI_Category"
+                placeholder="Enter your BMI Category" required>
+                <option class="placeholder" selected disabled value="">Select your BMI Category</option>
+                <option value="Overweight">
+                    Overweight
+                </option>
+                <option value="Normal">
+                    Normal
+                </option>
+                <option value="Normal Weight">
+                    Normal Weight
+                </option>
+                <option value="Obese">
+                    Obese
+                </option>
+                <option value="Overweight">
+                    Overweight
+                </option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <input class="btn btn-primary" type="submit" value="Predict your Sleep Disorder" required />
+        </div>
+    </form>
+    <h2>
+       You have {{results}}
+    </h2>
+   <body>
+</html>
