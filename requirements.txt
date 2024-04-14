@@ -4,9 +4,8 @@ seaborn
 matplotlib
 plotly
 scikit-learn
-catboost
-xgboost
 dill
 dataclasses
 flask
+gunicorn
 #-e .
